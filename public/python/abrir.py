@@ -1,7 +1,7 @@
 
 import serial
 
-arduino = serial.Serial('/dev/cu.ttyUSB0', 9600,timeout=1)
+arduino = serial.Serial('/dev/ttyUSB0', 9600,timeout=1)
 
 print("Starting!")
 comando = 'A'
