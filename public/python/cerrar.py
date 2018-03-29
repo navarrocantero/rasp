@@ -2,9 +2,9 @@
 import serial
 import time
 
-arduino = serial.Serial('/dev/ttyUSB0', 9600,timeout=1)
-time.sleep(5)
-arduino.write('C')
-print(arduino.read())
-
+arduino = serial.Serial('/dev/ttyUSB0', 9600)
+time.sleep(2)
+arduino.flush()
+comando = ('C') #Input
+arduino.write(comando) #Mandar un comando hacia Arduino
 arduino.close() #Finalizamos la comunicacion
