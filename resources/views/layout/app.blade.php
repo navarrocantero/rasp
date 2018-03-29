@@ -13,9 +13,12 @@
 
         </div>
     </div>
-    @if(session('rele'))
-    <p id="rele">{{$rele}}</p>
-    @endif
+    @isset($rele)
+        <p id="rele">{{$rele}}</p>
+    @endisset
+    @empty($rele)
+        no
+    @endempty
     <div class="col jumbotron">
         <form action="{{url('/abrir')}}" method="post">
             {{csrf_field()}}
