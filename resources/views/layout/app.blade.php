@@ -16,7 +16,7 @@
     @if(session('rele'))
     <p id="rele">{{$rele}}</p>
     @endif
-    <div class="col">
+    <div class="col jumbotron">
         <form action="{{url('/abrir')}}" method="post">
             {{csrf_field()}}
             <button class="btn btn-success col-12 mt-5" type="submit">ABRIR</button>
