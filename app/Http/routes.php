@@ -15,4 +15,9 @@ Route::post('/rele', function () {
     if (!$process->isSuccessful()) {
         throw new ProcessFailedException($process);
     }
+    $result = $process->getOutput();
+
+    return view('welcome',[
+        'rele' => $result
+    ]);
 });

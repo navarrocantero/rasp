@@ -13,6 +13,9 @@
 
         </div>
     </div>
+    @if(session('rele'))
+    <p id="rele">{{$rele}}</p>
+    @endif
     <div class="col">
         <form action="{{url('/rele')}}" method="post">
             {{csrf_field()}}
