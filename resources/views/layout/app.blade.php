@@ -13,10 +13,10 @@
 
         </div>
     </div>
-    {{--@isset($rele)--}}
-        {{--<p id="rele">{{$rele}}</p>--}}
-    {{--@endisset--}}
- {{----}}
+    @isset($rele)
+        <p id="rele">{{$rele}}</p>
+    @endisset
+
     <div class="col jumbotron">
         <form action="{{url('/abrir')}}" method="post">
             {{csrf_field()}}
