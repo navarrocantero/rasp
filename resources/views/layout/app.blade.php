@@ -14,9 +14,13 @@
         </div>
     </div>
     @if($rele)
-        <p id="rele">{{$rele}}</p>
-    @endif
+        @if($rele === 0)
+            <img src="images/trunk-open.png" alt="">
+            @elseif($rele === 1)
 
+        @endif
+    @endif
+    
     <div class="col jumbotron">
         <form action="{{url('/abrir')}}" method="post">
             {{csrf_field()}}

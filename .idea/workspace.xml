@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e571add-04d7-4634-b37d-ea3699d058a6" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/trunk-close.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/trunk-open.png" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layout/app.blade.php" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/classpreloader/classpreloader/" />
@@ -100,19 +103,27 @@
       <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layout/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            <state relative-caret-position="20">
+              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
               <folding>
-                <marker date="1522308187933" expanded="true" signature="54:70" ph="..." />
-                <marker date="1522308187933" expanded="true" signature="85:100" ph="..." />
-                <marker date="1522308187933" expanded="true" signature="297:302" ph="..." />
-                <marker date="1522308187933" expanded="true" signature="327:332" ph="..." />
-                <marker date="1522308187933" expanded="true" signature="407:420" ph="..." />
-                <marker date="1522308187933" expanded="true" signature="453:465" ph="..." />
-                <marker date="1522308187933" expanded="true" signature="594:608" ph="..." />
-                <marker date="1522308187933" expanded="true" signature="641:653" ph="..." />
+                <marker date="1522308640811" expanded="true" signature="54:70" ph="..." />
+                <marker date="1522308640811" expanded="true" signature="85:100" ph="..." />
+                <marker date="1522308640811" expanded="true" signature="297:302" ph="..." />
+                <marker date="1522308640811" expanded="true" signature="316:327" ph="..." />
+                <marker date="1522308640811" expanded="true" signature="402:413" ph="..." />
+                <marker date="1522308640811" expanded="true" signature="503:516" ph="..." />
+                <marker date="1522308640811" expanded="true" signature="549:561" ph="..." />
+                <marker date="1522308640811" expanded="true" signature="690:704" ph="..." />
+                <marker date="1522308640811" expanded="true" signature="737:749" ph="..." />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trunk-open.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/images/trunk-open.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -336,6 +347,12 @@
               <item name="rasp" type="b2602c69:ProjectViewProjectNode" />
               <item name="rasp" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rasp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rasp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -397,16 +414,17 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/python" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/resources/assets/css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/python" />
       <recent name="$PROJECT_DIR$/app/Http/python" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/resources/assets/js" />
-      <recent name="$PROJECT_DIR$/resources/views/layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -434,12 +452,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522289644955</updated>
-      <workItem from="1522289646369" duration="10749000" />
+      <workItem from="1522289646369" duration="11161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10749000" />
+    <option name="totallyTimeSpent" value="11161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="17" y="23" width="1263" height="1057" extended-state="0" />
@@ -617,19 +635,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/trunk-open.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/trunk-close.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layout/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="20">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding>
-            <marker date="1522308187933" expanded="true" signature="54:70" ph="..." />
-            <marker date="1522308187933" expanded="true" signature="85:100" ph="..." />
-            <marker date="1522308187933" expanded="true" signature="297:302" ph="..." />
-            <marker date="1522308187933" expanded="true" signature="327:332" ph="..." />
-            <marker date="1522308187933" expanded="true" signature="407:420" ph="..." />
-            <marker date="1522308187933" expanded="true" signature="453:465" ph="..." />
-            <marker date="1522308187933" expanded="true" signature="594:608" ph="..." />
-            <marker date="1522308187933" expanded="true" signature="641:653" ph="..." />
+            <marker date="1522308640811" expanded="true" signature="54:70" ph="..." />
+            <marker date="1522308640811" expanded="true" signature="85:100" ph="..." />
+            <marker date="1522308640811" expanded="true" signature="297:302" ph="..." />
+            <marker date="1522308640811" expanded="true" signature="316:327" ph="..." />
+            <marker date="1522308640811" expanded="true" signature="402:413" ph="..." />
+            <marker date="1522308640811" expanded="true" signature="503:516" ph="..." />
+            <marker date="1522308640811" expanded="true" signature="549:561" ph="..." />
+            <marker date="1522308640811" expanded="true" signature="690:704" ph="..." />
+            <marker date="1522308640811" expanded="true" signature="737:749" ph="..." />
           </folding>
         </state>
       </provider>
