@@ -14,6 +14,7 @@
         </div>
     </div>
     @if($rele)
+        {{$rele}}
         @if($rele === 0)
             <img src="images/trunk-open.png" alt="">
             <p>0</p>
