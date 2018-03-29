@@ -16,8 +16,10 @@
     @if($rele)
         @if($rele === 0)
             <img src="images/trunk-open.png" alt="">
+            <p>0</p>
             @elseif($rele === 1)
-
+            <img src="images/trunk-open.png" alt="">
+            <p>1</p>
         @endif
     @endif
     
