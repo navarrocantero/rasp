@@ -3,7 +3,7 @@
     <title>Laravel</title>
     @include('layout.scripts')
     @include('layout.styles')
-    <script src="js/releUno.js"></script>
+    {{--<script src="js/releUno.js"></script>--}}
 
 </head>
 <body>
@@ -13,12 +13,10 @@
 
         </div>
     </div>
-    @isset($rele)
-        <p id="rele">{{$rele}}</p>
-    @endisset
-    @empty($rele)
-        no
-    @endempty
+    {{--@isset($rele)--}}
+        {{--<p id="rele">{{$rele}}</p>--}}
+    {{--@endisset--}}
+ {{----}}
     <div class="col jumbotron">
         <form action="{{url('/abrir')}}" method="post">
             {{csrf_field()}}
