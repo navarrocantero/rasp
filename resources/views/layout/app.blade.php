@@ -13,9 +13,9 @@
 
         </div>
     </div>
-    @isset($rele)
+    @if($rele)
         <p id="rele">{{$rele}}</p>
-    @endisset
+    @endif
 
     <div class="col jumbotron">
         <form action="{{url('/abrir')}}" method="post">
