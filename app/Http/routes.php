@@ -29,7 +29,7 @@ Route::post('/cerrar', function () {
         throw new ProcessFailedException($process);
     }
     $result = $process->getOutput();
-
+    echo $result;
     return view('welcome',[
         'rele' => $result
     ]);
