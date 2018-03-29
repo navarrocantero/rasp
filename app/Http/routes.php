@@ -9,8 +9,21 @@ Route::get('/', function () {
 
 });
 
-Route::post('/rele', function () {
-    $process = new Process('python python/rasp.py');
+Route::post('/abrir', function () {
+    $process = new Process('python python/abrir.py');
+    $process->run();
+    if (!$process->isSuccessful()) {
+        throw new ProcessFailedException($process);
+    }
+    $result = $process->getOutput();
+
+    return view('welcome',[
+        'rele' => $result
+    ]);
+});
+
+Route::post('/cerrar', function () {
+    $process = new Process('python python/cerrar.py');
     $process->run();
     if (!$process->isSuccessful()) {
         throw new ProcessFailedException($process);

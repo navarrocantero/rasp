@@ -17,9 +17,14 @@
     <p id="rele">{{$rele}}</p>
     @endif
     <div class="col">
-        <form action="{{url('/rele')}}" method="post">
+        <form action="{{url('/abrir')}}" method="post">
             {{csrf_field()}}
-            <button class="btn btn-danger col-12 mt-5" type="submit">Rele 1</button>
+            <button class="btn btn-success col-12 mt-5" type="submit">ABRIR</button>
+        </form>
+
+        <form action="{{url('/cerrar')}}" method="post">
+            {{csrf_field()}}
+            <button class="btn btn-danger col-12 mt-5" type="submit">CERRAR</button>
         </form>
     </div>
 </div>
