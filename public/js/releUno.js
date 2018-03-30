@@ -39,9 +39,11 @@ function comprobar() {
 
 function trataErrores(respuesta) {
     if (respuesta === 1) {
-        $('#trunk').html(' <i class="fas fa-lock-open fa-10x mt-5 p-5 offset-1"></i>')
+        $('#trunk').html(' sd')
+        // $('#trunk').html(' <i class="fas fa-lock-open fa-10x mt-5 p-5 offset-1"></i>')
     } else if (respuesta === 0) {
-        $('#trunk').html(' <i class="fas fa-lock fa-10x mt-5 p-5 offset-1"></i>')
+        $('#trunk').html(' dd')
+        // $('#trunk').html(' <i class="fas fa-lock fa-10x mt-5 p-5 offset-1"></i>')
 
     }
 
