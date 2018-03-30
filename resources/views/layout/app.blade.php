@@ -15,8 +15,8 @@
         <div class="d-inline-flex   w-100">
             <input type="image" src="images/trunk-open.png "
                    name="saveForm"
-                   class="submit img-thumbnail img-fluid p-3 btn btn-outline-light borde"
-                   onclick="abrir()"/>
+                   id="trunkButton"
+                   class="submit img-thumbnail img-fluid p-3 btn btn-outline-light borde"/>
             <div id="trunk"></div>
         </div>
     </div>

@@ -1,8 +1,12 @@
-comprobar();
 loadProgressBar()
 
+
+$(function () {
+    comprobar();
+    $("#trunkButton").on("click",  abrir);
+    $("#trunkButton").on("tap",  abrir);
+});
 function abrir() {
-    event.preventDefault();
     axios.get('/abrir').then(function (response) {
         let respuesta = response.data;
         trataErrores(respuesta);

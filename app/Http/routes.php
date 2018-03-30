@@ -10,6 +10,8 @@ Route::get('/', function () {
 });
 
 Route::get('/abrir', function () {
+    return 1;
+
     $process = new Process('python python/abrir.py');
     $process->run();
     if (!$process->isSuccessful()) {
@@ -22,6 +24,7 @@ Route::get('/abrir', function () {
 });
 
 Route::get('/comprobar', function () {
+    return 1;
     $process = new Process('python python/comprobar.py');
     $process->run();
     if (!$process->isSuccessful()) {
