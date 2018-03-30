@@ -5,15 +5,15 @@ $(function () {
     comprobar();
 });
 
-
-
-$("#trunkButton").bind("tap", tapHandler);
-
-function tapHandler(event) {
-    $(event.target).addClass("tap");
-}
-
-$("#trunkButton").on('tap', abrir);
+//
+//
+// $("#trunkButton").bind("tap", tapHandler);
+//
+// function tapHandler(event) {
+//     $(event.target).addClass("tap");
+// }
+//
+// $("#trunkButton").on('tap', abrir);
 $("#trunkButton").on('click', abrir);
 
 function abrir() {
