@@ -46,7 +46,7 @@ function trataErrores(respuesta, boton) {
     } else if (respuesta === 0) {
         $('#trunk').html(' <i class="fas fa-lock fa-10x mt-5 p-5 offset-1"></i>')
     }
-
+console.log("ok")
     if (boton){
         $("#trunkButton").css('background-color',unpressButton);
 
