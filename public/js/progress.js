@@ -1,62 +1,47 @@
-'use strict';
+import 'nprogress/nprogress.css'
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.loadProgressBar = loadProgressBar;
+import NProgress from 'nprogress'
+import axios from 'axios'
 
-require('nprogress/nprogress.css');
+const calculatePercentage = (loaded, total) => (Math.floor(loaded * 1.0) / total)
 
-var _nprogress = require('nprogress');
 
-var _nprogress2 = _interopRequireDefault(_nprogress);
+export function loadProgressBar(config) {
 
-var _axios = require('axios');
+    let requestsCounter = 0
 
-var _axios2 = _interopRequireDefault(_axios);
+    const setupStartProgress = () => {
+        axios.interceptors.request.use(config => {
+            requestsCounter++
+            NProgress.start()
+            return config
+        })
+    }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+    const setupUpdateProgress = () => {
+        const update = e => NProgress.inc(calculatePercentage(e.loaded, e.total))
+        axios.defaults.onDownloadProgress = update
+        axios.defaults.onUploadProgress = update
+    }
 
-var calculatePercentage = function calculatePercentage(loaded, total) {
-    return Math.floor(loaded * 1.0) / total;
-};
+    const setupStopProgress = () => {
+        const responseFunc = response => {
+            if ((--requestsCounter) === 0)
+                NProgress.done()
+            return response
+        }
 
-function loadProgressBar(config) {
+        const errorFunc = error => {
+            if ((--requestsCounter) === 0)
+                NProgress.done()
+            return Promise.reject(error)
+        }
 
-    var requestsCounter = 0;
+        axios.interceptors.response.use(responseFunc, errorFunc)
+    }
 
-    var setupStartProgress = function setupStartProgress() {
-        _axios2.default.interceptors.request.use(function (config) {
-            requestsCounter++;
-            _nprogress2.default.start();
-            return config;
-        });
-    };
-
-    var setupUpdateProgress = function setupUpdateProgress() {
-        var update = function update(e) {
-            return _nprogress2.default.inc(calculatePercentage(e.loaded, e.total));
-        };
-        _axios2.default.defaults.onDownloadProgress = update;
-        _axios2.default.defaults.onUploadProgress = update;
-    };
-
-    var setupStopProgress = function setupStopProgress() {
-        var responseFunc = function responseFunc(response) {
-            if (--requestsCounter === 0) _nprogress2.default.done();
-            return response;
-        };
-
-        var errorFunc = function errorFunc(error) {
-            if (--requestsCounter === 0) _nprogress2.default.done();
-            return Promise.reject(error);
-        };
-
-        _axios2.default.interceptors.response.use(responseFunc, errorFunc);
-    };
-
-    _nprogress2.default.configure(config);
-    setupStartProgress();
-    setupUpdateProgress();
-    setupStopProgress();
+    NProgress.configure(config)
+    setupStartProgress()
+    setupUpdateProgress()
+    setupStopProgress()
 }
