@@ -3,8 +3,14 @@ loadProgressBar()
 
 $(function () {
     comprobar();
-    $("#trunkButton").on("click",  abrir);
-    $("#trunkButton").on("tap",  abrir);
+
+    $("#trunkButton").bind("tap",  tapHandler);
+
+    function tapHandler( event ){
+        $( event.target ).addClass( "tap" );
+    }
+
+    $("#trunkButton").on('tap',abrir);
 });
 function abrir() {
     axios.get('/abrir').then(function (response) {
