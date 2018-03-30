@@ -1,8 +1,8 @@
 loadProgressBar()
-
+comprobar();
 
 $(function () {
-    comprobar();
+
 
     $("#trunkButton").bind("tap",  tapHandler);
 
