@@ -3,17 +3,17 @@ $(function () {
     comprobar();
 
 });
-
-
-
-    $("#trunkButton").bind("tap",  tapHandler);
-
-    function tapHandler( event ){
-        $( event.target ).addClass( "tap" );
-    }
-
-    $("#trunkButton").on('tap',abrir);
-    // $("#trunkButton").on('click',abrir);
+    //
+    //
+    //
+    // $("#trunkButton").bind("tap",  tapHandler);
+    //
+    // function tapHandler( event ){
+    //     $( event.target ).addClass( "tap" );
+    // }
+    //
+    // $("#trunkButton").on('tap',abrir);
+    $("#trunkButton").on('click',abrir);
 
 
 function abrir() {
@@ -27,7 +27,6 @@ function abrir() {
 }
 
 function comprobar() {
-
     axios.get('/comprobar').then(function (response) {
         let respuesta = response.data;
         trataErrores(respuesta);
@@ -39,10 +38,9 @@ function comprobar() {
 
 function trataErrores(respuesta) {
     if (respuesta === 1) {
-        alert("ok")
+
         $('#trunk').html(' <i class="fas fa-lock-open fa-10x mt-5 p-5 offset-1"></i>')
     } else if (respuesta === 0) {
-        alert("nok")
 
         $('#trunk').html(' <i class="fas fa-lock fa-10x mt-5 p-5 offset-1"></i>')
 
