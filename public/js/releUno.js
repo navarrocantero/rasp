@@ -18,7 +18,7 @@ $(function () {
 
 function abrir() {
     axios.get('/abrir').then(function (response) {
-        let respuesta = response.data;
+        var respuesta = response.data;
         trataErrores(respuesta);
 
     }).catch(function (error) {
@@ -28,7 +28,7 @@ function abrir() {
 
 function comprobar() {
     axios.get('/comprobar').then(function (response) {
-        let respuesta = response.data;
+        var respuesta = response.data;
         trataErrores(respuesta);
 
     }).catch(function (error) {
