@@ -10,7 +10,7 @@ Route::get('/', function () {
 });
 
 Route::get('/abrir', function () {
-    
+
 
     $process = new Process('python python/abrir.py');
     $process->run();
