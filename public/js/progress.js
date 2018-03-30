@@ -1,47 +1,62 @@
-import 'nprogress/nprogress.css'
+'use strict';
 
-import NProgress from 'nprogress'
-import axios from 'axios'
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.loadProgressBar = loadProgressBar;
 
-const calculatePercentage = (loaded, total) => (Math.floor(loaded * 1.0) / total)
+require('nprogress/nprogress.css');
 
+var _nprogress = require('nprogress');
 
-export function loadProgressBar(config) {
+var _nprogress2 = _interopRequireDefault(_nprogress);
 
-    let requestsCounter = 0
+var _axios = require('axios');
 
-    const setupStartProgress = () => {
-        axios.interceptors.request.use(config => {
-            requestsCounter++
-            NProgress.start()
-            return config
-        })
-    }
+var _axios2 = _interopRequireDefault(_axios);
 
-    const setupUpdateProgress = () => {
-        const update = e => NProgress.inc(calculatePercentage(e.loaded, e.total))
-        axios.defaults.onDownloadProgress = update
-        axios.defaults.onUploadProgress = update
-    }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-    const setupStopProgress = () => {
-        const responseFunc = response => {
-            if ((--requestsCounter) === 0)
-                NProgress.done()
-            return response
-        }
+var calculatePercentage = function calculatePercentage(loaded, total) {
+    return Math.floor(loaded * 1.0) / total;
+};
 
-        const errorFunc = error => {
-            if ((--requestsCounter) === 0)
-                NProgress.done()
-            return Promise.reject(error)
-        }
+function loadProgressBar(config) {
 
-        axios.interceptors.response.use(responseFunc, errorFunc)
-    }
+    var requestsCounter = 0;
 
-    NProgress.configure(config)
-    setupStartProgress()
-    setupUpdateProgress()
-    setupStopProgress()
+    var setupStartProgress = function setupStartProgress() {
+        _axios2.default.interceptors.request.use(function (config) {
+            requestsCounter++;
+            _nprogress2.default.start();
+            return config;
+        });
+    };
+
+    var setupUpdateProgress = function setupUpdateProgress() {
+        var update = function update(e) {
+            return _nprogress2.default.inc(calculatePercentage(e.loaded, e.total));
+        };
+        _axios2.default.defaults.onDownloadProgress = update;
+        _axios2.default.defaults.onUploadProgress = update;
+    };
+
+    var setupStopProgress = function setupStopProgress() {
+        var responseFunc = function responseFunc(response) {
+            if (--requestsCounter === 0) _nprogress2.default.done();
+            return response;
+        };
+
+        var errorFunc = function errorFunc(error) {
+            if (--requestsCounter === 0) _nprogress2.default.done();
+            return Promise.reject(error);
+        };
+
+        _axios2.default.interceptors.response.use(responseFunc, errorFunc);
+    };
+
+    _nprogress2.default.configure(config);
+    setupStartProgress();
+    setupUpdateProgress();
+    setupStopProgress();
 }
