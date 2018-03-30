@@ -9,28 +9,25 @@ Route::get('/', function () {
 
 });
 
-Route::post('/abrir', function () {
+Route::get('/abrir', function () {
     $process = new Process('python python/abrir.py');
     $process->run();
     if (!$process->isSuccessful()) {
         throw new ProcessFailedException($process);
     }
     $result = $process->getOutput();
+    return $result;
 
-    return view('welcome',[
-        'rele' => $result
-    ]);
+
 });
 
-Route::post('/cerrar', function () {
-    $process = new Process('python python/cerrar.py');
+Route::get('/comprobar', function () {
+    $process = new Process('python python/comprobar.py');
     $process->run();
     if (!$process->isSuccessful()) {
         throw new ProcessFailedException($process);
     }
     $result = $process->getOutput();
-    echo $result;
-    return view('welcome',[
-        'rele' => $result
-    ]);
+    return $result;
+
 });

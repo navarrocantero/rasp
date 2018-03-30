@@ -3,40 +3,24 @@
     <title>Laravel</title>
     @include('layout.scripts')
     @include('layout.styles')
-    {{--<script src="js/releUno.js"></script>--}}
+    <script src="js/releUno.js" defer></script>
 
 </head>
 <body>
-<div class="container-fluid">
+
+<div class="container-fluid bg-secondary h-100">
     <div class="col-12">
-        <div class="navbar bg-danger">
+        <div class="navbar bg-dark p-4 mb-5"></div>
 
+        <div class="d-inline-flex   w-100">
+            <input type="image" src="images/trunk-open.png "
+                   name="saveForm"
+                   class="submit img-thumbnail img-fluid p-3 btn btn-outline-light borde"
+                   onclick="abrir()"/>
+            <div id="trunk"></div>
         </div>
-    </div>
-
-
-    <div class="col jumbotron">
-        <div class="img-thumbnail">
-            @if(isset($rele))
-                @if($rele == 0)
-                    <img src="images/trunk-open.png" alt="">
-                    <p>Abierto</p>
-                @elseif($rele == 1)
-                    <img src="images/trunk-open.png" alt="">
-                    <p>Cerrado</p>
-                @endif
-            @endif
-        </div>
-        <form action="{{url('/abrir')}}" method="post">
-            {{csrf_field()}}
-            <button class="btn btn-success col-12 mt-5" type="submit">ABRIR</button>
-        </form>
-
-        <form action="{{url('/cerrar')}}" method="post">
-            {{csrf_field()}}
-            <button class="btn btn-danger col-12 mt-5" type="submit">CERRAR</button>
-        </form>
     </div>
 </div>
+
 </body>
 </html>
