@@ -1,7 +1,9 @@
 loadProgressBar()
-comprobar();
-
 $(function () {
+    comprobar();
+
+});
+
 
 
     $("#trunkButton").bind("tap",  tapHandler);
@@ -11,8 +13,9 @@ $(function () {
     }
 
     $("#trunkButton").on('tap',abrir);
-    $("#trunkButton").on('click',abrir);
-});
+    // $("#trunkButton").on('click',abrir);
+
+
 function abrir() {
     axios.get('/abrir').then(function (response) {
         let respuesta = response.data;
@@ -35,7 +38,6 @@ function comprobar() {
 }
 
 function trataErrores(respuesta) {
-
     if (respuesta === 1) {
         $('#trunk').html(' <i class="fas fa-lock-open fa-10x mt-5 p-5 offset-1"></i>')
     } else if (respuesta === 0) {
