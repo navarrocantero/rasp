@@ -17,6 +17,7 @@ $(function () {
 $("#trunkButton").on('click', abrir);
 
 function abrir() {
+    $("#trunkButton").css("background-color", "#6c757d");
     axios.get('/abrir').then(function (response) {
         var respuesta = response.data;
         trataErrores(respuesta);
