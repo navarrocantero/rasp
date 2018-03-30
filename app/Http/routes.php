@@ -22,7 +22,7 @@ Route::get('/abrir', function () {
 
 });
 
-Route::get('/comprobar', function () {
+Route::get('/comprobar', function () { 
     $process = new Process('python python/comprobar.py');
     $process->run();
     if (!$process->isSuccessful()) {

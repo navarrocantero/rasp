@@ -11,6 +11,7 @@ $(function () {
     }
 
     $("#trunkButton").on('tap',abrir);
+    $("#trunkButton").on('click',abrir);
 });
 function abrir() {
     axios.get('/abrir').then(function (response) {
