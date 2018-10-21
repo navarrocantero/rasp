@@ -23,8 +23,12 @@ return 0;
 
 });
 
+
+
+
 Route::get('/comprobar', function () {
     return 1;
+
 
     $process = new Process('python python/comprobar.py');
     $process->run();
